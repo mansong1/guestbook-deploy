@@ -11,15 +11,15 @@ spec:
       - path: "guestbook/configs/**/config.json"
   template:
     metadata:
-      name: 'vanilla-k8s-app1-{{cluster.name}}'
+      name: 'guestbook-demo-{{cluster.name}}'
     spec:
-      project: b062fb30
+      project: c8b29069
       source:
         repoURL: https://github.com/wings-software/anshul-test.git
         targetRevision: '{{releaseTag}}'
         path: "vanilla-k8s/apps/app1/{{pathSuffix}}"
       destination:
         server: '{{cluster.address}}'
-        namespace: br-agent
+        namespace: harness-gitops-agent
       syncPolicy:
         automated: {}
