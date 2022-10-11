@@ -11,7 +11,7 @@ spec:
       - path: "guestbook/configs/**/config.json"
   template:
     metadata:
-      name: 'guestbook-demo-{{cluster.name}}'
+      name: 'guestbook-demo-{{cluster_name}}'
     spec:
       project: c8b29069
       source:
@@ -19,7 +19,7 @@ spec:
         targetRevision: '{{releaseTag}}'
         path: "vanilla-k8s/apps/app1/{{pathSuffix}}"
       destination:
-        server: '{{cluster.address}}'
+        server: '{{cluster_address}}'
         namespace: harness-gitops-agent
       syncPolicy:
         automated: {}
