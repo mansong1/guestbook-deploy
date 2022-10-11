@@ -20,6 +20,6 @@ spec:
         path: "vanilla-k8s/apps/app1/{{envName}}"
       destination:
         server: '{{cluster_address}}'
-        namespace: harness-gitops-agent
+        namespace: gitops-agent
       syncPolicy:
         automated: {}
