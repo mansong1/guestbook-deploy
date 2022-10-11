@@ -17,7 +17,7 @@ spec:
       source:
         repoURL: https://github.com/wings-software/anshul-test.git
         targetRevision: '{{releaseTag}}'
-        path: "vanilla-k8s/apps/app1/{{pathSuffix}}"
+        path: "vanilla-k8s/apps/app1/{{envName}}"
       destination:
         server: '{{cluster_address}}'
         namespace: harness-gitops-agent
