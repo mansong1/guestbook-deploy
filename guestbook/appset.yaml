@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: vanilla-k8s-app1
+  name: guestbook
 spec:
   generators:
   - git:
-      repoURL: https://github.com/wings-software/anshul-local-gitsync.git
-      revision: br-release-repo
+      repoURL: https://github.com/mansong1/guestbook-deploy.git
+      revision: main
       files:
-      - path: "vanilla-k8s/app1/*/*/config.json"
+      - path: "guestbook/configs/**/config.json"
   template:
     metadata:
       name: 'vanilla-k8s-app1-{{cluster.name}}'
