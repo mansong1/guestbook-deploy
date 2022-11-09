@@ -1,5 +1,5 @@
 {
-  "releaseTag" : "k8s-v0.2",
+  "releaseTag" : "k8s-v0.1",
   "cluster_name" : "clusterdev",
   "envName" : "dev",
   "cluster_address" : "https://kubernetes.default.svc"
